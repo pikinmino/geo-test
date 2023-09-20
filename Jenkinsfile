@@ -1,18 +1,17 @@
 pipeline{
     agent any
     stages{
-        stage(build){
-            steps {
-                echo 'hello build'
-
+    stage('build'){
+        steps {
+            echo 'hello build'
             }
-            stage(test){
-                steps {
-                    echo 'hello test'
-                }
-            }
-            
-        }
-
     }
-}
+    stage('clean artifact'){
+        steps{
+            echo 'hello clean'
+        }
+    }
+        
+            
+   }
+ }
